@@ -23,7 +23,14 @@ function Kill-App{
 
 ## Init
 
-$app1 = "BorderlessGaming"
-# $app1 = "TranslucentTB"
+. D:\Github\ScriptPowerShell-ProgrammeGestion\script\List.ps1
 
-Kill-App($app1)
+while($i -ne $arrayApp.Count)
+{
+    if(!$i){
+        Kill-App($arrayApp[0])
+    } else {
+        Kill-App($arrayApp[$i])
+    }
+    $i++
+}
