@@ -1,4 +1,4 @@
-Echo "Function Launch"
+## Function
 function Kill-App{
     [CmdletBinding()]
 	param(
@@ -11,8 +11,8 @@ function Kill-App{
 
         
         if($isLaunch){
-            # Stop-Process -Name $app
-            echo "Kill App"
+            Stop-Process -Name $app
+            echo "$app is Kill"
         }
     
     } catch {  
@@ -21,5 +21,9 @@ function Kill-App{
     }
 }
 
+## Init
 
+$app1 = "BorderlessGaming"
+# $app1 = "TranslucentTB"
 
+Kill-App($app1)
